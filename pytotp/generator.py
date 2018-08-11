@@ -13,3 +13,14 @@ class Algorithm(Enum):
     SHA256 = 2
     # The SHA-512 hash function.
     SHA512 = 3
+
+"""An error type enum representing the various errors a `Generator` can throw when computing a
+password.
+"""
+class Error(Enum):
+    # The requested time is before the epoch date.
+    INVALID_TIME = 1
+    # The timer period is not a positive number of seconds.
+    INVALID_PERIOD = 2
+    # The number of digits is either too short to be secure, or too long to compute.
+    INVALID_DIGITS = 3

@@ -13,3 +13,8 @@ __version__      = '0.1'
 __url__          = 'https://github.com/abdullahselek/pytotp'
 __download_url__ = 'https://github.com/abdullahselek/pytotp'
 __description__  = 'A Python library for generating TOTP and HOTP one-time passwords.'
+
+from .generator import (
+    Algorithm,
+    Error
+)
