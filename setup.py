@@ -37,9 +37,10 @@ setup(
     download_url=extract_metaitem('download_url'),
     packages=find_packages(exclude=('tests', 'docs')),
     platforms=['Any'],
+    install_requires=['enum34'],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
-    keywords='totp, hotp, one-time passwords',
+    keywords='totp, hotp, one-time passwords, unique tokens, totp token creater',
     classifiers=[
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
