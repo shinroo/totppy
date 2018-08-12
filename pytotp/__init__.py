@@ -18,3 +18,4 @@ from .generator import (
     Algorithm,
     Error
 )
+from pytotp import crypto
