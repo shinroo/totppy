@@ -19,3 +19,4 @@ from .generator import (
     Error
 )
 from pytotp import crypto
+from pytotp import base32helper
