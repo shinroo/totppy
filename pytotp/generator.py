@@ -24,3 +24,20 @@ class Error(Enum):
     INVALID_PERIOD = 2
     # The number of digits is either too short to be secure, or too long to compute.
     INVALID_DIGITS = 3
+
+"""A moving factor with which a generator produces different one-time passwords over time.
+"""
+class Factor(object):
+    """The possible values are `digits` and `period`, with associated values for each."""
+
+    def __init__(self, digits=6, period=30):
+        """Returns a Factor instance.
+        Args:
+          digits (int):
+            The number of digits in the password.
+          period (int):
+            Time period for password.
+        """
+
+        self._digits = digits
+        self._period = period
