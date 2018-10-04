@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
+import pytest
 from pytotp import (
     Factor,
     Generator,
@@ -18,8 +19,14 @@ class GeneratorTest(unittest.TestCase):
         self.assertEqual(factor._digits, 4)
         self.assertEqual(factor._period, 15)
 
-    def test_init_generator(self):
-        factor = Factor(digits=4, period=15)
+    def test_init_generator_success(self):
+        factor = Factor(digits=6, period=15)
         generator = Generator(factor, Algorithm.SHA1)
         self.assertIsNotNone(generator._factor)
         self.assertEqual(generator._algorithm, Algorithm.SHA1)
+
+    def test_init_generator_fail(self):
+        factor = Factor(digits=4, period=15)
+        with pytest.raises(Exception) as exception:
+            Generator(factor, Algorithm.SHA1)
+        assert str(exception.value) == 'Invalid given factor'

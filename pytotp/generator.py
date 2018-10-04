@@ -57,3 +57,12 @@ class Generator(object):
 
         self._factor = factor
         self._algorithm = algorithm
+        assert self.__validate_factor(factor) == None, 'Invalid given factor'
+
+    def __validate_factor(self, factor):
+        if factor._period < 0:
+            return Error.INVALID_PERIOD
+        suitable_digits = [6, 7, 8]
+        if factor._digits not in suitable_digits:
+            return Error.INVALID_DIGITS
+        return None
