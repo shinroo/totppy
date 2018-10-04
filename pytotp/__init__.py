@@ -17,7 +17,8 @@ __description__  = 'A Python library for generating TOTP and HOTP one-time passw
 from .generator import (
     Algorithm,
     Error,
-    Factor
+    Factor,
+    Generator
 )
 from pytotp import crypto
 from pytotp import base32helper

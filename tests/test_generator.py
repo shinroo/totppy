@@ -3,7 +3,9 @@
 
 import unittest
 from pytotp import (
-    Factor
+    Factor,
+    Generator,
+    Algorithm
 )
 
 class GeneratorTest(unittest.TestCase):
@@ -15,3 +17,9 @@ class GeneratorTest(unittest.TestCase):
         factor = Factor(digits=4, period=15)
         self.assertEqual(factor._digits, 4)
         self.assertEqual(factor._period, 15)
+
+    def test_init_generator(self):
+        factor = Factor(digits=4, period=15)
+        generator = Generator(factor, Algorithm.SHA1)
+        self.assertIsNotNone(generator._factor)
+        self.assertEqual(generator._algorithm, Algorithm.SHA1)

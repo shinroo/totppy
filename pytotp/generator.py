@@ -41,3 +41,19 @@ class Factor(object):
 
         self._digits = digits
         self._period = period
+
+"""A Generator contains all of the parameters needed to generate a one-time password.
+"""
+class Generator(object):
+
+    def __init__(self, factor, algorithm):
+        """Returns a Generator instance.
+        Args:
+          factor (Factor):
+            Contains digits and period.
+          algorithm (Algorithm):
+            Algorithm to be used to generate token.
+        """
+
+        self._factor = factor
+        self._algorithm = algorithm
