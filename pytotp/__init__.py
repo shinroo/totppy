@@ -22,3 +22,4 @@ from .generator import (
 )
 from pytotp import crypto
 from pytotp import base32helper
+from .token import Token
