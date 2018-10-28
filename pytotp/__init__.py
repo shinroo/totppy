@@ -15,11 +15,15 @@ __download_url__ = 'https://github.com/abdullahselek/pytotp'
 __description__  = 'A Python library for generating TOTP and HOTP one-time passwords.'
 
 from .generator import (
-    Algorithm,
-    Error,
     Factor,
     Generator
 )
-from pytotp import crypto
-from pytotp import base32helper
+from pytotp import (
+    crypto,
+    base32helper
+)
+from .enums import (
+    Algorithm,
+    Error
+)
 from .token import Token

@@ -5,7 +5,7 @@ import hmac
 import hashlib
 import binascii
 
-from .generator import Algorithm
+from .enums import Algorithm
 
 """Return a new hmac object.
 Args:
