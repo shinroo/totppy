@@ -46,20 +46,20 @@ class Factor(object):
 """
 class Generator(object):
 
-    def __init__(self, factor, algorithm, data):
+    def __init__(self, factor, algorithm, secret):
         """Returns a Generator instance.
         Args:
           factor (Factor):
             Contains digits and period.
           algorithm (Algorithm):
             Algorithm to be used to generate token.
-          data (bytes):
+          secret (bytes):
             The shared secret.
         """
 
         self._factor = factor
         self._algorithm = algorithm
-        self._data = data
+        self._secret = secret
         assert self.__validate_factor(factor) == None, 'Invalid given factor'
 
     def __validate_factor(self, factor):
