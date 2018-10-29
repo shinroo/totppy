@@ -15,10 +15,16 @@ class TokenTest(unittest.TestCase):
 
     def test_init(self):
         factor = Factor(6, 10)
-        secret = base32helper.encode('secret')
-        generator = Generator(factor, Algorithm.SHA1, secret)
+        generator = Generator(factor, Algorithm.SHA1, 'secret')
         token = Token(generator, 'name', 'issuer')
         self.assertIsNotNone(token)
         self.assertEqual(token._generator, generator)
         self.assertEqual(token._name, 'name')
         self.assertEqual(token._issuer, 'issuer')
+
+    def test_password(self):
+        factor = Factor(6, 10)
+        generator = Generator(factor, Algorithm.SHA1, 'secret')
+        token = Token(generator, 'name', 'issuer')
+        password = token.password()
+        self.assertEqual(len(str(password)), 6)
