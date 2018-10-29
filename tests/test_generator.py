@@ -3,6 +3,8 @@
 
 import unittest
 import pytest
+import datetime
+
 from pytotp import (
     Factor,
     Generator,
@@ -31,3 +33,9 @@ class GeneratorTest(unittest.TestCase):
         with pytest.raises(Exception) as exception:
             Generator(factor, Algorithm.SHA1, base32helper.encode('data'))
         assert str(exception.value) == 'Invalid given factor'
+
+    def test_password(self):
+        factor = Factor(digits=6, period=15)
+        generator = Generator(factor, Algorithm.SHA1, 'secret')
+        password = generator.password(datetime.datetime(2018, 10, 29, 19, 20))
+        self.assertEqual(password, 591396)

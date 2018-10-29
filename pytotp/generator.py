@@ -1,7 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import struct
+import binascii
+import datetime
+import time
 
+from pytotp import crypto
 from .enums import (
     Error,
     Algorithm
@@ -51,3 +56,20 @@ class Generator(object):
         if factor._digits not in suitable_digits:
             return Error.INVALID_DIGITS
         return None
+
+    """Returns a Generator instance.
+    Args:
+      date (datetime):
+        The target time, represented as a `datetime`.
+    Returns:
+      The generated password.
+    """
+    def password(self, date):
+        counter = int(time.mktime(date.timetuple()))
+        # Ensure the counter value is big-endian
+        big_counter_bytes = struct.pack(">I", counter)
+        hash = crypto.HMAC(self._algorithm, self._secret, big_counter_bytes)
+        offset = ord(hash[len(hash)-1]) & 0x0F
+        truncated_hash = binascii.hexlify(hash[offset : offset+4].encode())
+        password = int(truncated_hash, 32) % pow(10, self._factor._digits)
+        return password
