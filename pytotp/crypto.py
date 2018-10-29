@@ -17,7 +17,7 @@ Args:
     Initial input for the hash, if provided.
 """
 def HMAC(algorithm, key, data):
-    byte_key = binascii.unhexlify(key)
+    byte_key = key.encode()
     if algorithm == Algorithm.SHA1:
         return hmac.new(byte_key, msg=data, digestmod=hashlib.sha1).hexdigest().upper()
     elif algorithm == Algorithm.SHA256:
