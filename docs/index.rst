@@ -1,16 +1,19 @@
 .. pytotp documentation master file, created by
-   sphinx-quickstart on Tue Oct 30 09:06:56 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
+Contents:
+ 
 Welcome to pytotp's documentation!
 ==================================
+**A Python library for generating TOTP and HOTP one-time passwords.**
+
+Author: Abdullah Selek
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
-
+   installation.rst
+   pytotp.rst
 
 Indices and tables
 ==================
