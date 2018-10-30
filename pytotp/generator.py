@@ -57,7 +57,7 @@ class Generator(object):
             return Error.INVALID_DIGITS
         return None
 
-    """Returns a Generator instance.
+    """Returns a onetime use password.
     Args:
       date (datetime):
         The target time, represented as a `datetime`.
