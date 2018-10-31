@@ -14,7 +14,7 @@ def read(filename):
     with codecs.open(os.path.join(cwd, filename), 'rb', 'utf-8') as h:
         return h.read()
 
-metadata = read(os.path.join(cwd, 'pytotp', '__init__.py'))
+metadata = read(os.path.join(cwd, 'totppy', '__init__.py'))
 
 def extract_metaitem(meta):
     meta_match = re.search(r"""^__{meta}__\s+=\s+['\"]([^'\"]*)['\"]""".format(meta=meta),
@@ -24,7 +24,7 @@ def extract_metaitem(meta):
     raise RuntimeError('Unable to find __{meta}__ string.'.format(meta=meta))
 
 setup(
-    name='pytotp',
+    name='totppy',
     version=extract_metaitem('version'),
     license=extract_metaitem('license'),
     description=extract_metaitem('description'),

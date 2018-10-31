@@ -15,5 +15,5 @@ install:
 
 # command to run tests
 script:
-  - py.test -s -v --cov-report xml --cov=pytotp
+  - py.test -s -v --cov-report xml --cov=totppy
   - codecov

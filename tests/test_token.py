@@ -3,7 +3,7 @@
 
 import unittest
 import pytest
-from pytotp import (
+from totppy import (
     Token,
     Generator,
     Factor,

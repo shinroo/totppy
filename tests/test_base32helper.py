@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from pytotp import base32helper
+from totppy import base32helper
 
 class Base32HelperTest(unittest.TestCase):
 

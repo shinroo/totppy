@@ -1,8 +1,8 @@
-.. pytotp documentation master file, created by
+.. totppy documentation master file, created by
 
 Contents:
  
-Welcome to pytotp's documentation!
+Welcome to totppy's documentation!
 ==================================
 **A Python library for generating TOTP and HOTP one-time passwords.**
 
@@ -12,7 +12,7 @@ Author: Abdullah Selek
    :maxdepth: 1
 
    installation.rst
-   pytotp.rst
+   totppy.rst
 
 Indices and tables
 ==================

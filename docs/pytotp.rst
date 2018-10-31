@@ -1,30 +1,30 @@
 Modules Documentation
 =====================
 
-pytotp
+totppy
 ------
 
-.. automodule:: pytotp.generator
+.. automodule:: totppy.generator
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pytotp.token
+.. automodule:: totppy.token
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pytotp.enums
+.. automodule:: totppy.enums
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pytotp.crypto
+.. automodule:: totppy.crypto
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pytotp.base32helper
+.. automodule:: totppy.base32helper
     :members:
     :undoc-members:
     :show-inheritance:

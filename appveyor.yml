@@ -20,4 +20,4 @@ install:
 build: off
 
 test_script:
-  - "%PYTHON%\\python.exe -m pytest -s -v --cov-report xml --cov=pytotp"
+  - "%PYTHON%\\python.exe -m pytest -s -v --cov-report xml --cov=totppy"

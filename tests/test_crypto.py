@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from pytotp import (
+from totppy import (
     crypto,
     Algorithm
 )

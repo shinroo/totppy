@@ -5,7 +5,7 @@ import unittest
 import pytest
 import datetime
 
-from pytotp import (
+from totppy import (
     Factor,
     Generator,
     Algorithm,

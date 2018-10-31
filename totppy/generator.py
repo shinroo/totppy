@@ -6,7 +6,7 @@ import binascii
 import datetime
 import time
 
-from pytotp import crypto
+from totppy import crypto
 from .enums import (
     Error,
     Algorithm
