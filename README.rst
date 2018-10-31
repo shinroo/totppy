@@ -1,6 +1,12 @@
 totppy
 ======
 
+.. image:: https://img.shields.io/pypi/pyversions/totppy.svg
+    :target: https://pypi.org/project/totppy
+
+.. image:: https://readthedocs.org/projects/totppy/badge/?version=latest
+    :target: http://totppy.readthedocs.org/en/latest/?badge=latest
+
 .. image:: https://codecov.io/gh/abdullahselek/totppy/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/abdullahselek/totppy
 
