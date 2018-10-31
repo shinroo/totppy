@@ -10,7 +10,6 @@ Author: Abdullah Selek
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents:
 
    installation.rst
    pytotp.rst
