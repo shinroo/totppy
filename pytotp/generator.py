@@ -57,14 +57,15 @@ class Generator(object):
             return Error.INVALID_DIGITS
         return None
 
-    """Returns a onetime use password.
-    Args:
-      date (datetime):
-        The target time, represented as a `datetime`.
-    Returns:
-      The generated password.
-    """
     def password(self, date):
+        """Returns a onetime use password.
+        Args:
+          date (datetime):
+            The target time, represented as a `datetime`.
+        Returns:
+          The generated password.
+        """
+
         counter = int(time.mktime(date.timetuple()))
         # Ensure the counter value is big-endian
         big_counter_bytes = struct.pack(">I", counter)
