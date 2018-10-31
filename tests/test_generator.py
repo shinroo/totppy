@@ -38,4 +38,4 @@ class GeneratorTest(unittest.TestCase):
         factor = Factor(digits=6, period=15)
         generator = Generator(factor, Algorithm.SHA1, 'secret')
         password = generator.password(datetime.datetime(2018, 10, 29, 19, 20))
-        self.assertEqual(password, 591396)
+        self.assertEqual(password, '591396')

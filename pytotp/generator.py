@@ -73,4 +73,4 @@ class Generator(object):
         offset = ord(hash[len(hash)-1]) & 0x0F
         truncated_hash = binascii.hexlify(hash[offset : offset+4].encode())
         password = int(truncated_hash, 32) % pow(10, self._factor._digits)
-        return password
+        return str(password).ljust(self._factor._digits, '0')

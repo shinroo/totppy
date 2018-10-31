@@ -27,4 +27,4 @@ class TokenTest(unittest.TestCase):
         generator = Generator(factor, Algorithm.SHA1, 'secret')
         token = Token(generator, 'name', 'issuer')
         password = token.password()
-        self.assertEqual(len(str(password)), 6)
+        self.assertEqual(len(password), 6)
