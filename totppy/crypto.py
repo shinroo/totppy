@@ -8,15 +8,15 @@ import binascii
 from .enums import Algorithm
 
 def HMAC(algorithm, key, data):
-      """Return a new hmac object.
-      Args:
-        algorithm (enum):
-          Enum type from `Algorithm`.
-        key (str):
-          Key for the keyed hash object.
-        data (bytes):
-          Initial input for the hash, if provided.
-      """
+    """Return a new hmac object.
+    Args:
+      algorithm (enum):
+        Enum type from `Algorithm`.
+      key (str):
+        Key for the keyed hash object.
+      data (bytes):
+        Initial input for the hash, if provided.
+    """
 
     byte_key = key.encode()
     if algorithm == Algorithm.SHA1:
