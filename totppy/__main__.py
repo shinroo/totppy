@@ -19,9 +19,13 @@ help_message = '''
   Options
     --help, -h              Display help message
     --version, -v           Display installed version
+    --generator, -g         Create one time password with generator.
+    --token, -t             Create one time password with token.
   Examples
     $ python spampy --help
     $ python spampy --version
+    $ python spampy --generator
+    $ python spampy --token
 '''
 
 spampy_version = __version__
