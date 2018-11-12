@@ -43,3 +43,11 @@ spampy_version = __version__
               default=False,
               help='Create one time password with token.',
               type=(int, int, str, str, str))
+
+def main(help, version, generator, token):
+    if (help):
+        print(help_message)
+        sys.exit(0)
+
+if __name__ == '__main__':
+    main()
