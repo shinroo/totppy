@@ -26,4 +26,4 @@ from .enums import (
     Algorithm,
     Error
 )
-from .token import Token
+from .totp_token import Token
