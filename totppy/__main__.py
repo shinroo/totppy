@@ -29,3 +29,17 @@ help_message = '''
 '''
 
 spampy_version = __version__
+
+@click.command(add_help_option=False)
+@click.option('-h', '--help', is_flag=True, default=False, help='Display help message.')
+@click.option('-v', '--version', is_flag=True, default=False, help='Display installed version.')
+@click.option('-g', '--generator', 
+              is_flag=True,
+              default=False,
+              help='Create one time password with generator.',
+              type=(int, int, str))
+@click.option('-t', '--token',
+              is_flag=True,
+              default=False,
+              help='Create one time password with token.',
+              type=(int, int, str, str, str))
