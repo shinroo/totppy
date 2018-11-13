@@ -3,6 +3,7 @@
 
 import sys
 import click
+import datetime
 
 from totppy import (
     __version__,
@@ -33,9 +34,7 @@ totppy_version = __version__
 @click.command(add_help_option=False)
 @click.option('-h', '--help', is_flag=True, default=False, help='Display help message.')
 @click.option('-v', '--version', is_flag=True, default=False, help='Display installed version.')
-@click.option('-g', '--generator', 
-              is_flag=True,
-              default=False,
+@click.option('-g', '--generator',
               help='Create one time password with generator.',
               type=(int, int, str))
 @click.option('-t', '--token',
@@ -51,6 +50,12 @@ def main(help, version, generator, token):
     else:
         if (version):
             print('totppy' +  ' ' + totppy_version)
+        elif (generator):
+            (digits, period, secret) = generator
+            factor = Factor(digits=digits, period=period)
+            generator = Generator(factor, Algorithm.SHA1, secret)
+            password = generator.password(datetime.datetime.now())
+            print('One time password : ' + str(password))
 
 if __name__ == '__main__':
     main()
