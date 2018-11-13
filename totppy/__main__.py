@@ -23,10 +23,10 @@ help_message = '''
     --generator, -g         Create one time password with generator.
     --token, -t             Create one time password with token.
   Examples
-    $ python spampy --help
-    $ python spampy --version
-    $ python spampy --generator
-    $ python spampy --token
+    $ python totppy --help
+    $ python totppy --version
+    $ python totppy --generator 6 15 'secret'
+    $ python totppy --token 6 15 'secret' 'name' 'issuer'
 '''
 
 totppy_version = __version__
