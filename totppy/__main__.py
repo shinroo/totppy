@@ -28,7 +28,7 @@ help_message = '''
     $ python spampy --token
 '''
 
-spampy_version = __version__
+totppy_version = __version__
 
 @click.command(add_help_option=False)
 @click.option('-h', '--help', is_flag=True, default=False, help='Display help message.')
@@ -48,6 +48,9 @@ def main(help, version, generator, token):
     if (help):
         print(help_message)
         sys.exit(0)
+    else:
+        if (version):
+            print('totppy' +  ' ' + totppy_version)
 
 if __name__ == '__main__':
     main()
