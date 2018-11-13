@@ -36,11 +36,11 @@ totppy_version = __version__
 @click.option('-v', '--version', is_flag=True, default=False, help='Display installed version.')
 @click.option('-g', '--generator',
               help='Create one time password with generator.',
+              default=[None] * 3,
               type=(int, int, str))
 @click.option('-t', '--token',
-              is_flag=True,
-              default=False,
               help='Create one time password with token.',
+              default=[None] * 5,
               type=(int, int, str, str, str))
 
 def main(help, version, generator, token):
