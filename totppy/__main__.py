@@ -56,6 +56,13 @@ def main(help, version, generator, token):
             generator = Generator(factor, Algorithm.SHA1, secret)
             password = generator.password(datetime.datetime.now())
             print('One time password : ' + str(password))
+        elif (token):
+            (digits, period, secret, name, issuer) = token
+            factor = Factor(digits=digits, period=period)
+            generator = Generator(factor, Algorithm.SHA1, secret)
+            token = Token(generator, name, issuer)
+            password = token.password()
+            print('One time password : ' + str(password))
 
 if __name__ == '__main__':
     main()
