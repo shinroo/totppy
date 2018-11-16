@@ -4,6 +4,7 @@
 import sys
 import click
 import datetime
+import pytest-cov
 
 from totppy import (
     __version__,
@@ -49,6 +50,8 @@ totppy_version = __version__
               default=False,
               help='Create one time password with token, prompts for inputs.')
 
+
+@pytest.marker.no_cover
 def main(help, version, generator, token):
     if (help):
         print(help_message)
