@@ -1,6 +1,9 @@
 totppy
 ======
 
+.. image:: https://img.shields.io/pypi/v/totppy.svg
+    :target: https://pypi.python.org/pypi/totppy/
+
 .. image:: https://img.shields.io/pypi/pyversions/totppy.svg
     :target: https://pypi.org/project/totppy
 
