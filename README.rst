@@ -91,6 +91,27 @@ or::
     token = Token(generator, 'name', 'issuer')
     password = token.password()
 
+CLI
+===
+
+Available functions for CLI:
+
++-----------------+--------------------------------------------------------------+
+|      Command    |                         Description                          |
++-----------------+--------------------------------------------------------------+
+|    --help, -h   | Display help message                                         |
++-----------------+--------------------------------------------------------------+
+|  --version, -v  | Display installed version                                    |
++-----------------+--------------------------------------------------------------+
+| --generator, -g | Create one time password with generator, prompts for inputs. |
++-----------------+--------------------------------------------------------------+
+|   --token, -t   | Create one time password with token, prompts for inputs.     |
++-----------------+--------------------------------------------------------------+
+             
+
+If you cloned repository you can call direct ``python totppy --help`` in root folder.
+Or you installed via **pip** you can use ``python -m totppy --help``.
+
 Relevant RFCs
 -------------
 
