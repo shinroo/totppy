@@ -1,0 +1,2 @@
+[run]
+omit = totppy/__main__.py
